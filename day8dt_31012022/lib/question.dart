@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
 class Question extends StatelessWidget {
@@ -8,6 +10,14 @@ class Question extends StatelessWidget {
   const Question(this.questionIndex);
   @override
   Widget build(BuildContext context) {
-    return Text(questionIndex);
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.all(5.0),
+      child: Text(
+        questionIndex,
+        style: const TextStyle(fontSize: 21, fontStyle: FontStyle.italic),
+        textAlign: TextAlign.center,
+      ),
+    );
   }
 }
