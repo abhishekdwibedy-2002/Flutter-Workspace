@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors, avoid_print
+// ignore_for_file: prefer_const_constructors, avoid_print, unused_local_variable
 import 'package:flutter/material.dart';
+import './question.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,14 +25,36 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    var questionList = [
+      'What\'s your fav color ?',
+      'What\'s your fav animal ?',
+    ];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Home Page'),
         ),
         body: Column(
-          children: const [
-            Text('Home Text !'),
+          children: [
+            Question(
+              questionList[index],
+            ),
+            ElevatedButton(
+              onPressed: question,
+              child: Text('Answer'),
+            ),
+            ElevatedButton(
+              onPressed: question,
+              child: Text('Answer'),
+            ),
+            ElevatedButton(
+              onPressed: question,
+              child: Text('Answer'),
+            ),
+            ElevatedButton(
+              onPressed: question,
+              child: Text('Answer'),
+            ),
           ],
         ),
       ),
